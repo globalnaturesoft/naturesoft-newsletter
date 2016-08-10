@@ -44,7 +44,7 @@
 					<% @newsletters.each do |item| %>
 						<tr>
 							<td class="kq_search"><%= item.email %></td>
-							<td><%= slideshow.created_at.strftime("%d/%m/%Y") %></td>
+							<td><%= item.created_at.strftime("%d/%m/%Y") %></td>
 							<td class="text-right">
 							  <div class="btn-group">
 									<%= link_to '<i class="icon-pencil"></i>'.html_safe, naturesoft_newsletters.edit_admin_newsletter_path(item), class: "btn bg-teal-400 btn-icon" %>
