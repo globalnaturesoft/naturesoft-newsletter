@@ -56,6 +56,13 @@ module Naturesoft
           @newsletter.destroy
           render text: 'Newsletter was successfully destroyed.'
         end
+        
+        # DELETE /newsletters/delete?ids=1,2,3
+        def delete
+          @newsletters = Newsletter.where(id: params[:ids].split(","))
+          @newsletters.destroy_all
+          render text: 'Newsletter(s) was successfully destroyed.'
+        end
     
         private
           # Use callbacks to share common setup or constraints between actions.
