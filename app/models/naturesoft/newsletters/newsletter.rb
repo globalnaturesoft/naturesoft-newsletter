@@ -1,6 +1,8 @@
 module Naturesoft::Newsletters
   class Newsletter < ApplicationRecord
     
+    validates :email, :presence => true, :uniqueness => true
+    
     def self.sort_by
       [
         ["Email","naturesoft_newsletters_newsletters.email"],
