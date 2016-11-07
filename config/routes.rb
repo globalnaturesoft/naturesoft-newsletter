@@ -1,5 +1,5 @@
 Naturesoft::Newsletters::Engine.routes.draw do
-  namespace :admin, module: "admin", path: "admin/newsletters" do
+  namespace :backend, module: "backend", path: "backend/newsletters" do
     resources :newsletters do
       collection do
         delete 'delete'

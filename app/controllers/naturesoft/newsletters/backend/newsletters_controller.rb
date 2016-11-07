@@ -1,14 +1,14 @@
 module Naturesoft
   module Newsletters
-    module Admin
-      class NewslettersController < Naturesoft::Admin::AdminController
+    module Backend
+      class NewslettersController < Naturesoft::Backend::BackendController
         before_action :set_newsletter, only: [:show, :edit, :update, :destroy]
         before_action :default_breadcrumb
         
         # add top breadcrumb
         def default_breadcrumb
-          add_breadcrumb "Newsletter", naturesoft_newsletters.admin_newsletters_path
-          add_breadcrumb "Newsletters", naturesoft_newsletters.admin_newsletters_path
+          add_breadcrumb "Newsletter", naturesoft_newsletters.backend_newsletters_path
+          add_breadcrumb "Newsletters", naturesoft_newsletters.backend_newsletters_path
         end
     
         # GET /newsletters
