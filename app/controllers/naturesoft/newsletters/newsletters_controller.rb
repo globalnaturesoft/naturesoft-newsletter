@@ -1,6 +1,6 @@
 module Naturesoft
   module Newsletters
-    class NewslettersController < Naturesoft::Admin::AdminController
+    class NewslettersController < Naturesoft::FrontendController
       before_action :set_newsletter, only: [:add_newsletter]
       
       def add_email
